@@ -26,8 +26,8 @@ def init_config():
             "email": "",
             "auth_code": "",
             "sender_name": "人力资源部",
-            "smtp_server": "smtp.qq.com",
-            "smtp_port": "465",
+            "smtp_server": "",
+            "smtp_port": "",
             "timeout": "20"
         }
         cfg["send"] = {
