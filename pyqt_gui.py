@@ -112,7 +112,7 @@ class EmailSenderThread(QThread):
                 else:
                     # 检查是不是550频率限制错误
                     if "550" in error and "Too many attempts" in error:
-                        self.log_signal.emit(f"⚠️  触发QQ邮箱频率限制！自动等待60分钟后继续...")
+                        self.log_signal.emit(f"⚠️  即将触发QQ邮箱频率限制！自动等待60分钟后继续...")
                         # 分段等待60分钟，方便用户中途停止
                         for wait_min in range(60):
                             if not self._is_running:
