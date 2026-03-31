@@ -82,7 +82,7 @@ class EmailSenderThread(QThread):
                 self.log_signal.emit(f"❌ {connect_result[1]}")
                 self.finished_signal.emit(0, total_remaining, employees)
                 return
-            self.log_signal.emit("✅ 邮件服务器连接成功，开始发送...")
+            self.log_signal.emit("✅ 邮件服务器已经连接成功，开始发送...")
             self.log_signal.emit(f"⚠️  发送间隔：{SLEEP_PER_MAIL}秒/封，遇到限制自动等待1小时")
             
             # 4. 循环发送（核心：遇到550错误自动长等待）
