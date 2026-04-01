@@ -13,7 +13,7 @@ def build_salary_html(emp):
     try:
         emp["应发工资"] = emp["基本工资"] + emp["提成"] + emp["加班工资"] - emp["社保扣除"] - emp["考勤扣除"]
     except:
-        emp["应发工资"] = "计算异常"
+        emp["应发工资"] = "计算异常了，哈哈哈"
     return f"""
 <html>
 <body style="font-family:Microsoft YaHei;font-size:14px;">
